@@ -31,10 +31,7 @@ public class Restcontroller {
         return "new_employee";
     }
 
-    @GetMapping("/getAll")
-    public ResponseEntity<List<Employee>> getAllEmployee() {
-        return new ResponseEntity<>(employeeService.getAllEmp(), HttpStatus.OK);
-    }
+
 
     @GetMapping("/deleteEmployee/{id}")
     public String getDelete(@PathVariable(value = "id") Integer id) {

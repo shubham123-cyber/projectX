@@ -18,12 +18,14 @@ public class EmployeeService {
     }
 
     public List<Employee> getAllEmp() {
-        return (List<Employee>) sqlrepo.findAll();
+        List<Employee> emp= (List<Employee>) sqlrepo.findAll();
+        //System.out.println("Getting data:" +emp);
+        return emp;
     }
 
-    public String deleteById(Integer id) {
+    public String delById(Integer id) {
         if (id == null) {
-            return "Bad id";
+            return null;
         }
         sqlrepo.deleteById(id);
         return "😘😘😘😘😘";

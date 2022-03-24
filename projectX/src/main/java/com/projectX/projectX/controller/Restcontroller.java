@@ -35,7 +35,7 @@ public class Restcontroller {
 
     @GetMapping("/deleteEmployee/{id}")
     public String getDelete(@PathVariable(value = "id") Integer id) {
-        employeeService.deleteById(id);
+        employeeService.delById(id);
         return "redirect:/home";
     }
     @GetMapping("/updateId/{id}")
